@@ -48,6 +48,27 @@
       "endDate": "2023-08-24",
       "type": "online",
       "id": "01H7CRV5PE5618B2J2S5GK3Z22"
+    },
+    {
+      "subjectId": "01H7B9X54SCGAK3ZF8MFD4DFWM",
+      "startDate": "2023-08-17",
+      "endDate": "2023-09-14",
+      "type": "physical",
+      "id": "01H7CX1M79CWDDEWCR38QW7NRY"
+    },
+    {
+      "subjectId": "01H7B9X54SCGAK3ZF8MFD4DFWM",
+      "startDate": "2023-08-23",
+      "endDate": "2023-09-23",
+      "type": "physical",
+      "id": "01H7CX2NQKAAHNRSK2QC94GQ25"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CX3TZEH0RR3ET99NJFCS0N"
     }
   ]
 }

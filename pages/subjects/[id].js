@@ -56,18 +56,18 @@ export default function Subject({ classes, subject, error }) {
           </>
         ) : (
           <>
-            <div className='flex justify-between mb-12 items-center'>
+            <div className='text-center md:text-left md:flex justify-between mb-12 items-center'>
               <h1 className='text-3xl font-bold basis-3/4'>
                 Classes for {subject.name}
               </h1>
               <Link
                 href={'/classes/new'}
-                className='bg-secondary hover:opacity-70 transition-all duration-200 text-white block w-[150px] text-center py-3 rounded'
+                className='bg-secondary hover:opacity-70 transition-all duration-200 text-white block max-w-[150px] mx-auto mt-5 md:m-0 w-[150px] text-center py-3 rounded'
               >
                 New
               </Link>
             </div>
-            <ul className='grid grid-cols-2 gap-x-8 gap-y-6 items-center'>
+            <ul className='grid grid-rows-2 md:grid-cols-2 gap-x-8 gap-y-6 items-center'>
               {classes.map((_class, index) => (
                 <li key={_class.id} className='bg-white py-4 px-5 shadow-md'>
                   <h2 className='text-xl mb-6'>

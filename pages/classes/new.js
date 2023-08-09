@@ -53,8 +53,8 @@ const Class = ({ subjects }) => {
         <h1 className='text-3xl font-bold mb-12 basis-3/4'>
           Create a new class
         </h1>
-        <div className='bg-white py-10 px-10 shadow-md'>
-          <div className=' grid grid-cols-2 gap-x-5 gap-y-10'>
+        <div className='bg-white px-5 py-10 md:p-10 shadow-md'>
+          <div className=' grid grid-rows-2 md:grid-cols-2 gap-x-5 gap-y-10'>
             <div>
               <label className={'block font-medium mb-3'} htmlFor='subject'>
                 Select Subject
