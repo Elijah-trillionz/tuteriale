@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     };
 
     await Classes.create(newClass);
-    res.json({ msg: 'successful' });
+    return res.json({ msg: 'successful' });
   }
-  res.status(400).json({ msg: 'post requests only' });
+  return res.status(400).json({ msg: 'post requests only' });
 }
