@@ -1,9 +1,10 @@
+import { baseUrl } from '@/utils';
 import Head from 'next/head';
 import Link from 'next/link';
 
 export const getServerSideProps = async (ctx) => {
   const { id } = ctx.query;
-  const subjectRaw = await fetch(`http://localhost:3000/api/subjects/${id}`, {
+  const subjectRaw = await fetch(`${baseUrl}/api/subjects/${id}`, {
     headers: { accept: 'application/json' },
   });
 
@@ -11,10 +12,9 @@ export const getServerSideProps = async (ctx) => {
   if (!subjectRaw.ok)
     return { props: { error: subjectJson.msg, classes: [], subject: {} } };
 
-  const classesRaw = await fetch(
-    `http://localhost:3000/api/classes/${subjectJson.id}`,
-    { headers: { accept: 'application/json' } }
-  );
+  const classesRaw = await fetch(`${baseUrl}/api/classes/${subjectJson.id}`, {
+    headers: { accept: 'application/json' },
+  });
 
   const classesJson = await classesRaw.json();
   if (!classesRaw.ok)
