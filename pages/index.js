@@ -1,13 +1,14 @@
+import { baseUrl } from '@/utils';
 import Head from 'next/head';
 import Link from 'next/link';
 
 export const getServerSideProps = async () => {
-  const subjectsRaw = await fetch('http://localhost:3000/api/subjects', {
+  const subjectsRaw = await fetch(`${baseUrl}/api/subjects`, {
     headers: { accept: 'application/json' },
   });
   const subjectsJson = await subjectsRaw.json();
 
-  const classesRaw = await fetch('http://localhost:3000/api/classes', {
+  const classesRaw = await fetch(`${baseUrl}/api/classes`, {
     headers: { accept: 'application/json' },
   });
   const classesJson = await classesRaw.json();

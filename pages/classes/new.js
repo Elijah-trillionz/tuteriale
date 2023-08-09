@@ -1,9 +1,10 @@
+import { baseUrl } from '@/utils';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export const getServerSideProps = async () => {
-  const res = await fetch('http://localhost:3000/api/subjects', {
+  const res = await fetch(`${baseUrl}/api/subjects`, {
     headers: { accept: 'application/json' },
   });
   const jsonRes = await res.json();
@@ -32,7 +33,7 @@ const Class = ({ subjects }) => {
     };
 
     setLoading(true);
-    const res = await fetch('http://localhost:3000/api/classes/new', {
+    const res = await fetch(`${baseUrl}/api/classes/new`, {
       method: 'post',
       headers: {
         accept: 'application/json',

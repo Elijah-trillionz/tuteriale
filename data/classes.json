@@ -69,6 +69,20 @@
       "endDate": "2023-08-24",
       "type": "online",
       "id": "01H7CX3TZEH0RR3ET99NJFCS0N"
+    },
+    {
+      "subjectId": "01H7B7F67FCE544EAK85S0Y3ER",
+      "startDate": "2023-08-19",
+      "endDate": "2023-09-12",
+      "type": "physical",
+      "id": "01H7CYRZ8DZWQ4J0A6JRXSYS7V"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CYVT9D15QWV6W7PVDW31EC"
     }
   ]
 }
