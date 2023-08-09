@@ -42,12 +42,12 @@ export default function Home({ subjects }) {
         <title>Subjects - Tuteriale</title>
       </Head>
       <div>
-        <ul className='grid grid-cols-3 gap-x-8 gap-y-6 items-center'>
+        <ul className='grid grid-rows-3 md:grid-cols-3 gap-x-8 gap-y-6 items-center'>
           {subjects.map((subject) => (
             <li key={subject.id}>
               <Link
                 href={`/subjects/${subject.id}`}
-                className='block bg-white py-10 px-5 min-h-[320px] hover:shadow-solid ease-in-out duration-500 transition-shadow'
+                className='block bg-white py-10 px-5 min-h-[320px] shadow md:hover:shadow-solid ease-in-out duration-500 transition-shadow'
               >
                 <h2 className='text-3xl min-h-[85px] flex items-end'>
                   {subject.name}
