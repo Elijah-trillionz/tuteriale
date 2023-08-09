@@ -15,5 +15,5 @@ const schema = {
 
 export default async function handler(req, res) {
   const subjects = await Subjects.allData;
-  res.json({ subjects });
+  res.json(subjects);
 }

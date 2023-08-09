@@ -2,14 +2,35 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export const getServerSideProps = async () => {
-  const res = await fetch('http://localhost:3000/api/subjects', {
+  const subjectsRaw = await fetch('http://localhost:3000/api/subjects', {
     headers: { accept: 'application/json' },
   });
-  const jsonRes = await res.json();
+  const subjectsJson = await subjectsRaw.json();
+
+  const classesRaw = await fetch('http://localhost:3000/api/classes', {
+    headers: { accept: 'application/json' },
+  });
+  const classesJson = await classesRaw.json();
+
+  const subjects = subjectsJson.map((subject) => {
+    let onlineClasses = 0;
+    let physicalClasses = 0;
+    classesJson.map((_class) => {
+      if (subject.id === _class.subjectId) {
+        return _class.type === 'online'
+          ? (onlineClasses += 1)
+          : (physicalClasses += 1);
+      }
+    });
+    return {
+      ...subject,
+      classes: { online: onlineClasses, physical: physicalClasses },
+    };
+  });
 
   return {
     props: {
-      subjects: jsonRes.subjects,
+      subjects: subjects,
     },
   };
 };
@@ -32,8 +53,12 @@ export default function Home({ subjects }) {
                   {subject.name}
                 </h2>
                 <div className='mt-10'>
-                  <p className='text-sm'>15 Online Classes</p>
-                  <p className='text-sm'>5 Physical Classes</p>
+                  <p className='text-sm online'>
+                    {subject.classes.online} Online Classes
+                  </p>
+                  <p className='text-sm physical'>
+                    {subject.classes.physical} Physical Classes
+                  </p>
                 </div>
               </Link>
             </li>

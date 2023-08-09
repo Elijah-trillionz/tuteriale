@@ -1,8 +1,8 @@
 import { ulid } from 'ulid';
-import { Classes } from '.';
+import { Classes } from './[subjectId]';
 
 export default async function handler(req, res) {
-  if (req.headers.method === 'POST') {
+  if (req.method === 'POST') {
     const { subjectId, startDate, endDate, type } = req.body;
 
     const id = ulid();

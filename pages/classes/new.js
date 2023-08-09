@@ -10,14 +10,14 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      subjects: jsonRes.subjects,
+      subjects: jsonRes,
     },
   };
 };
 
 const Class = ({ subjects }) => {
-  const [subject, setSubject] = useState('');
-  const [classType, setClassType] = useState('');
+  const [subject, setSubject] = useState(subjects[0].id);
+  const [classType, setClassType] = useState('online');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [loading, setLoading] = useState(false);
@@ -117,6 +117,7 @@ const Class = ({ subjects }) => {
           </div>
           <button
             onClick={handleFormSubmit}
+            type='submit'
             disabled={loading}
             className={`bg-secondary mt-10 hover:opacity-70 transition-opacity duration-200 text-white rounded w-full block py-3 disabled:opacity-30`}
           >

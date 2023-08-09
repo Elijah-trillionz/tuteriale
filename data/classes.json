@@ -1,3 +1,53 @@
 {
-  "classes": []
+  "classes": [
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CJG6RYFJK8M4RG435MR28F"
+    },
+    {
+      "subjectId": "01H7B9X54SCGAK3ZF8MFD4DFWM",
+      "startDate": "2023-08-17",
+      "endDate": "2023-09-14",
+      "type": "online",
+      "id": "01H7CKM7VGWHZB52VEYX18Z8AF"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CRHA4YBVCBHJCFNQ9R7S5W"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CRPS93T7MR0XAFH15Z49CJ"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CRQKAMVBCSR1PTCXN87XJH"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CRSCMDV4VHHNDAA0CN9611"
+    },
+    {
+      "subjectId": "01H7B7DADW4V1C56MDAVXQC81K",
+      "startDate": "2023-08-10",
+      "endDate": "2023-08-24",
+      "type": "online",
+      "id": "01H7CRV5PE5618B2J2S5GK3Z22"
+    }
+  ]
 }
